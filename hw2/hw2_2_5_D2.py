@@ -134,7 +134,7 @@ class DecisionTree():
             print('y =', round(DT.node_class))
 
         else:
-            print("If (X_"+str(DT.feature_index), ">= "+str(DT.split_threshold)+"):")
+            print("If (X_"+str(DT.feature_index), ">= "+str(DT.split_threshold)+"):  (GainRatio:"+str(round(DT.gain_ratio,3))+")")
 
             print("%sThen: " % (guide), end="")
             self.PrintTree(DT.left_group, guide + "+-----")
