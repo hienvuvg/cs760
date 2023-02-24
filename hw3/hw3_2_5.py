@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
-# from sklearn.preprocessing import StandardScaler
 from sklearn import metrics
 
 from LogisticRegression import LogisticRegression

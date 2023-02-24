@@ -8,7 +8,7 @@ class LogisticRegression:
 		self.bias = 0
 
 	def normalization(self, X):		
-		scaler = MinMaxScaler()
+		scaler = MinMaxScaler() # Tranform all features into the range [0,1] 
 		X = scaler.fit_transform(X)
 		return X
 
@@ -20,7 +20,7 @@ class LogisticRegression:
 
 	# Calculate Cross-Entropy Loss
 	def loss(self, y, y_hat):
-		return -np.mean(y*(np.log(y_hat)) + (1-y)*np.log(1-y_hat))
+		return -np.mean(y*(np.log2(y_hat)) + (1-y)*np.log2(1-y_hat))
 
 	# The gradient of the cross-entropy loss for logistic regression with respect to weight and bias
 	# Ref 1: https://web.stanford.edu/~jurafsky/slp3/5.pdf
