@@ -20,7 +20,9 @@ print("Data size: ",np.shape(dataset))
 X_train = dataset[:,0:-1] 
 y_train = dataset[:,-1] 
 
-knn = KNeighborsClassifier(n_neighbors=1)
+# As mentioned by Tzu-Heng Huang on piazza: "Only need to implement logistic regression from scratch. You can use packages for knn questions."
+# Configuration: default is “minkowski”, which results in the standard Euclidean distance when p = 2
+knn = KNeighborsClassifier(n_neighbors=1, p=2, metric='minkowski') 
 knn.fit(X_train, y_train)
 
 # %%
